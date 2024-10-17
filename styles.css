@@ -1,0 +1,665 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* Color Palette */
+:root {
+    --main-bg: #f6f6f6; /* Main background color */
+    --primary-bg: #f6f6f6; /* Light cream for cards and buttons */
+    --secondary-bg: #f3eace; /* Light green for highlights */
+    --highlight-bg: #d7ecc9; /* Slightly darker green for buttons */
+    --soft-accent: #c2dedf; /* Muted blue-green for links */
+    --text-color: #000000;  /* Black text color */
+}
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: var(--text-color); /* Black text for body */
+    background-color: var(--main-bg); /* Main background color */
+}
+
+a {
+    text-decoration: none;
+    color: var(--soft-accent); /* Muted blue-green for links */
+    transition: color 0.3s ease;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Logo Styling */
+.logo {
+    width: 60px; /* Updated width */
+    height: 60px; /* Updated height */
+    position: fixed;
+    top: 20px; /* Same top position as the menu button */
+    right: 20px; /* Align to the right side, opposite the menu button */
+    z-index: 1001; /* Keep the logo above other elements */
+    cursor: pointer; /* Add a pointer cursor to make it interactive */
+}
+
+/* Sidebar Menu */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: var(--primary-bg); /* Light cream for sidebar */
+    padding-top: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: var(--text-color); /* Black for sidebar links */
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: var(--soft-accent); /* Muted blue-green on hover */
+    border-radius: 5px;
+}
+
+/* Submenu Styles */
+.submenu {
+    display: none; /* Hide the submenu by default */
+    padding-left: 20px; /* Indent submenu items */
+    list-style-type: none; /* Remove default list styling */
+}
+
+.sidebar ul li:hover .submenu {
+    display: block; /* Show submenu on hover */
+}
+
+.submenu li {
+    margin: 10px 0; /* Space between submenu items */
+}
+
+.submenu li a {
+    color: var(--text-color); /* Black for submenu links */
+    padding: 8px 20px; /* Padding for submenu links */
+    transition: background-color 0.3s;
+}
+
+.submenu li a:hover {
+    background-color: var(--soft-accent); /* Highlight on hover */
+    border-radius: 5px; /* Rounded corners for submenu items */
+}
+
+.menu-button {
+    background-color: var(--primary-bg); /* Light cream for button */
+    color: var(--text-color);
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    border-radius: 5px;
+    z-index: 1001;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: var(--soft-accent); /* Change to muted blue-green on hover */
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 200px;
+    cursor: pointer;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+/* Hero Section */
+#hero, #hero-about, #hero-services, #hero-portfolio, #hero-contact {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--main-bg); /* Main background color */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 0 20px;
+}
+
+.tagline {
+    color: var(--primary-bg); /* Light cream */
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in;
+}
+
+.subtext {
+    color: white;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.cta-button {
+    background-color: var(--secondary-bg); /* Light green */
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: fadeIn 2s ease-in;
+}
+
+.cta-button:hover {
+    background-color: var(--soft-accent); /* Muted blue-green */
+    transform: scale(1.05);
+}
+
+/* Showreel Section */
+.showreel {
+    padding: 50px 20px; /* Add padding for spacing */
+    background-color: var(--main-bg); /* Use main background color */
+    text-align: center; /* Center align text and video */
+}
+
+.showreel h2 {
+    font-size: 2.5rem; /* Adjust title size */
+    margin-bottom: 20px; /* Space below the title */
+    color: var(--text-color); /* Use black text color */
+}
+
+.showreel iframe {
+    width: 560px; /* Set width as per YouTube standard */
+    height: 315px; /* Set height as per YouTube standard */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Add slight rounding to corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    margin: 0 auto; /* Center the iframe */
+    display: block; /* Make it a block element */
+}
+
+/* About and Mission Sections */
+#about, #mission {
+    padding: 50px 20px;
+    background-color: var(--main-bg); /* Main background color */
+    text-align: center;
+    color: var(--text-color); /* Black text */
+}
+
+.about-text, .mission-text {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Team Section */
+#team {
+    padding: 50px 20px;
+    background-color: var(--primary-bg); /* Light cream */
+    text-align: center;
+}
+
+.single-team-member {
+    max-width: 600px; /* Limit the width to center the content */
+    margin: 0 auto; /* Center the team section */
+    padding: 20px;
+    background-color: var(--secondary-bg); /* Light green background */
+    border-radius: 10px; /* Soft corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.single-team-member img {
+    width: 100%; /* Responsive width */
+    max-width: 400px; /* Restrict the max width of the image */
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for the image */
+    margin-bottom: 20px; /* Space between the image and text */
+}
+
+.single-team-member h3 {
+    font-size: 1.8rem; /* Larger font size for name */
+    color: var(--text-color); /* Black text for name */
+    margin-bottom: 10px;
+}
+
+.single-team-member p {
+    font-size: 1.2rem; /* Slightly larger for readability */
+    color: var(--text-color); /* Black text for description */
+    margin-bottom: 15px;
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Services Section */
+#services-list {
+    padding: 50px 20px;
+    background-color: var(--primary-bg); /* Light cream */
+    text-align: center;
+}
+
+.services-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.service-card {
+    background-color: var(--secondary-bg); /* Light green */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1s ease-in;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.service-card p {
+    margin: 10px 0;
+}
+
+/* Responsive Services Grid */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Change to 1 column on very small screens */
+    }
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 50px 20px;
+    background-color: var(--main-bg); /* Main background color */
+}
+
+/* Video Section */
+.video-section {
+    padding: 50px 20px; /* Padding for video section */
+    background-color: var(--main-bg); /* Main background color */
+    text-align: center; /* Center align text and video */
+}
+
+.video-section h2 {
+    font-size: 2.5rem; /* Title size */
+    color: var(--text-color); /* Text color */
+}
+
+.video-section .gallery-grid {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-around; /* Space items evenly */
+    flex-wrap: wrap; /* Wrap items to next line */
+}
+
+.video-section .video-item {
+    margin: 20px; /* Margin for individual video items */
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, and basis for responsiveness */
+    max-width: 400px; /* Limit maximum width of video item */
+}
+
+.video-section iframe {
+    width: 100%; /* Set width to fill parent */
+    height: 225px; /* Set height as per YouTube standard */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Add slight rounding to corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    display: block; /* Make it a block element */
+}
+
+/* Contact Form */
+#contact-form {
+    padding: 50px 20px;
+    background-color: var(--main-bg); /* Main background color */
+    text-align: center;
+}
+
+#contact-form-element {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--soft-accent);
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--highlight-bg);
+}
+
+button.cta-button {
+    display: inline-block;
+    background-color: var(--highlight-bg); /* Slightly darker green */
+    color: var(--text-color);
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button.cta-button:hover {
+    background-color: var(--soft-accent); /* Muted blue-green */
+    transform: scale(1.05);
+}
+
+/* WhatsApp Button */
+#whatsapp {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: var(--primary-bg); /* Light cream for consistency */
+}
+
+#whatsapp .cta-button {
+    background-color: #25D366; /* WhatsApp Green */
+    color: white; /* White text */
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#whatsapp .cta-button:hover {
+    background-color: #128C7E; /* Darker WhatsApp green on hover */
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: var(--highlight-bg); /* Slightly darker green */
+    color: var(--text-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    color: var(--text-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Gallery Styling */
+.gallery-subsection {
+    margin-bottom: 40px; /* Spacing between subsections */
+}
+
+.subsection-title {
+    font-size: 2rem; /* Font size for subsection titles */
+    margin: 20px 0; /* Margin around the title */
+}
+
+.gallery-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+}
+
+.gallery-item {
+    position: relative; /* For potential absolute positioning inside */
+    background-color: #fff; /* White background for the photo */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Clip any overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.gallery-item img {
+    width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.gallery-description {
+    text-align: center; /* Center align the description */
+    margin-top: 10px; /* Margin above description */
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 50px 20px;
+    background-color: var(--primary-bg); /* Light cream for testimonials background */
+    text-align: center;
+}
+
+.testimonial {
+    max-width: 800px; /* Restrict the width for better readability */
+    margin: 0 auto 40px; /* Center and space out testimonials */
+    padding: 20px;
+    background-color: var(--secondary-bg); /* Light green for testimonial background */
+    border-radius: 10px; /* Soft corners for testimonial box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.testimonial h3 {
+    font-size: 1.5rem;
+    color: var(--text-color); /* Black for client names */
+    margin-bottom: 10px;
+}
+
+.testimonial p {
+    font-size: 1.2rem; /* Increase font size for readability */
+    color: var(--text-color); /* Black text for testimonial content */
+    line-height: 1.6;
+}
+
+/* Accessibility for Testimonials (Alt Text) */
+.testimonial-alt-text {
+    display: none; /* Visually hidden but accessible to screen readers */
+}
+
+/* Portfolio Subsection Styling */
+.portfolio-subsection {
+    margin-bottom: 40px; /* Space between portfolio subsections */
+}
+
+.portfolio-subsection h3 {
+    font-size: 2rem; /* Larger font size for portfolio subsection titles */
+    color: var(--text-color); /* Black for subsection titles */
+    margin-bottom: 20px;
+}
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between portfolio items */
+}
+
+.portfolio-item {
+    background-color: #fff; /* White background for portfolio items */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deepen shadow on hover */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-item p {
+    padding: 10px;
+    font-size: 1.1rem;
+    color: var(--text-color); /* Black for portfolio item descriptions */
+    text-align: center;
+}
+
+/* Services Section Styles */
+#services {
+    padding: 50px 20px; /* Add padding for spacing */
+}
+
+.service-cards {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 20px; /* Space between service cards */
+}
+
+.service-card {
+    padding: 20px;
+    border: 1px solid var(--soft-accent); /* Border for the card */
+    border-radius: 10px; /* Rounded corners for card */
+    background-color: var(--secondary-bg); /* Light green for service card background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deepen shadow on hover */
+}
+
+/* Portfolio Section Styles */
+#portfolio {
+    padding: 50px 20px; /* Padding for the portfolio section */
+}
+
+.video-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow videos to wrap to the next line */
+    justify-content: center; /* Center align the videos */
+    gap: 20px; /* Space between video items */
+}
+
+.video-item {
+    flex: 1 1 300px; /* Allow each video item to grow and shrink */
+    max-width: 300px; /* Limit the maximum width of video items */
+    margin: 10px; /* Margin around video items */
+}
+
+.video-item iframe {
+    width: 100%; /* Set width to fill parent */
+    height: 170px; /* Adjust height as needed for smaller videos */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Add slight rounding to corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Contact Section Styles */
+.contact-section {
+    padding: 50px 20px; /* Add padding for spacing */
+    background-color: var(--primary-bg); /* Light cream background */
+    text-align: center; /* Center align text */
+}
+
+.contact-section h2 {
+    font-size: 2.5rem; /* Adjust heading size */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.contact-section p {
+    font-size: 1.2rem; /* Increase font size for readability */
+    margin-bottom: 20px; /* Space below paragraph */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--highlight-bg); /* Slightly darker green */
+    color: var(--text-color);
+    padding: 20px 0; /* Vertical padding for footer */
+    text-align: center; /* Center align footer text */
+}
+
+.footer-content p {
+    margin: 0; /* Remove default margin */
+}
+
+.social-links {
+    margin-top: 10px; /* Space between copyright text and social links */
+}
+
+.social-link {
+    margin: 0 10px; /* Space between social icons */
+    color: var(--text-color); /* Use consistent text color */
+    transition: color 0.3s; /* Add transition for hover effect */
+}
+
+.social-link:hover {
+    color: var(--soft-accent); /* Change color on hover */
+}
