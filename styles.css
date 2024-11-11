@@ -663,3 +663,41 @@ footer .social-links a {
 .social-link:hover {
     color: var(--soft-accent); /* Change color on hover */
 }
+
+/* Hero Logo Styling */
+.hero-logo {
+    width: 150px; /* Adjust size as needed */
+    margin-bottom: 10px; /* Spacing between logo and tagline */
+    animation: fadeIn 2s ease-in-out;
+}
+
+#portfolio .section-title {
+    color: var(--text-color); /* Use text color for title */
+    background: none; /* Remove any background color */
+    padding: 0; /* Remove padding if it previously defined a banner */
+}
+
+.contact-section .subtext {
+    color: #ffffff; /* Set to white or a high-contrast color */
+    font-size: 1.2rem; /* Increase size if necessary */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional shadow for contrast */
+}
+
+/* Responsive Grid for Services */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Maintain 3 columns on desktop */
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .service-cards {
+        grid-template-columns: 1fr 1fr; /* Two columns on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-cards {
+        grid-template-columns: 1fr; /* One column on mobile */
+    }
+}
