@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in Touch - AMPC">
+    <title>AMPC - Contact Us</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body style="background-color: var(--main-bg); color: var(--text-color);">
+
+    <!-- Navbar (Bootstrap Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--secondary-bg);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/AMPC_LOGO_NOBACKGROUND.png" alt="AMPC Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="../pages/services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../pages/corporate-video-production.html">Corporate Video Production</a></li>
+                            <li><a class="dropdown-item" href="../pages/commercial-filming.html">Commercial Filming</a></li>
+                            <li><a class="dropdown-item" href="../pages/post-production.html">Post-Production</a></li>
+                            <li><a class="dropdown-item" href="../pages/photography.html">Photography</a></li>
+                            <li><a class="dropdown-item" href="../pages/live-event-production.html">Live Event Production</a></li>
+                            <li><a class="dropdown-item" href="../pages/social-media-content.html">Social Media Content</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero-contact" class="d-flex align-items-center justify-content-center" style="background: url('../images/hero-background.jpg') no-repeat center center/cover; height: 60vh;">
+        <div class="hero-overlay text-center">
+            <h1 class="tagline fade-in" style="color: var(--highlight-bg);">Get in Touch</h1>
+            <p class="subtext fade-in" style="color: var(--text-color);">We'd love to hear from you and discuss how we can bring your creative vision to life through our dynamic video production services.</p>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section id="contact-info" class="container py-5">
+        <h2 class="section-title fade-in text-center">Contact Us</h2>
+        <p class="section-text fade-in text-center">
+            We’d love to hear from you! Reach out using any of the following methods to start a conversation about how we can bring your vision to life.
+        </p>
+        <div class="row">
+            <div class="col-lg-6">
+                <ul class="list-unstyled contact-details">
+                    <li><i class="fas fa-map-marker-alt"></i> Address: 1 Banks Lane, Klippoortje AH, 1401</li>
+                    <li><i class="fas fa-phone"></i> Phone: <a href="tel:+27824488496">+27 82 448 8496</a></li>
+                    <li><i class="fas fa-envelope"></i> Email: <a href="mailto:justyn@africanmotion.co.za">justyn@africanmotion.co.za</a></li>
+                </ul>
+                <div class="contact-buttons mt-4">
+                    <button class="btn btn-primary" onclick="redirectToWhatsApp()"><i class="fab fa-whatsapp"></i> Contact Us on WhatsApp</button>
+                    <button class="btn btn-secondary" onclick="redirectToEmail()"><i class="fas fa-envelope"></i> Email Us</button>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="../images/Photos/contact-us-image.jpg" alt="Contact Us" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </section>
+
+<!-- Footer Section -->
+<footer class="footer text-center text-light py-4" style="background-color: var(--soft-accent);">
+    <div class="footer-content fade-in">
+        <p>© 2024 AMPC. All Rights Reserved. Built by <a href="https://janendren.achari.itvarsitystudent.org/" target="_blank" style="color: var(--text-color);">Janendren Achari</a>.</p>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@AMPC_Film_and_Video_Production" class="social-link" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100027190586598" class="social-link" aria-label="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/ampc_film_and_video_production/" class="social-link" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+    <!-- JavaScript to handle WhatsApp and Email redirection -->
+    <script>
+        function redirectToWhatsApp() {
+            const whatsappNumber = '27824488496'; // Replace with your WhatsApp number (country code + number)
+            const whatsappMessage = `Hello, I would like to discuss video production services.`;
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+            window.open(whatsappURL, '_blank');
+        }
+
+        function redirectToEmail() {
+            const subject = 'Inquiry About Video Production Services';
+            const email = 'justyn@africanmotion.co.za';
+            const emailBody = 'Hello, I am interested in your video production services. Please provide more information.';
+
+            const emailURL = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+            window.open(emailURL, '_blank');
+        }
+    </script>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>
