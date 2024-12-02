@@ -362,10 +362,10 @@ footer .social-links a:hover {
 /* Responsive embed container for posts */
 .embed-container {
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* Change to 'visible' to avoid cutting off content */
     width: 100%;
     padding-top: 56.25%; /* Aspect ratio 16:9 */
-    border-radius: 6px; /* Matches the post box rounding */
+    border-radius: 6px; /* Keeps consistent rounding */
 }
 
 .embed-container iframe {
@@ -375,4 +375,60 @@ footer .social-links a:hover {
     width: 100%;
     height: 100%;
     border: none;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.embed-container {
+    z-index: 1050; /* Ensure the container is on top of other elements */
+}
+
+/* Optional: If you want more flexibility on larger screens, add media queries */
+@media (min-width: 768px) {
+    .embed-container {
+        padding-top: 40%; /* You can adjust this if you want a different aspect ratio on larger screens */
+    }
+}
+
+
+/* Custom Gallery Section CSS */
+#custom-gallery .embed-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 56.25%; /* Aspect ratio 16:9 for responsiveness */
+    height: 0;
+}
+
+#custom-gallery iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Ensure iframe scales properly within the container */
+    max-height: 100%;
+}
+
+/* Instagram, Facebook, and YouTube specific styling for responsive scaling */
+#custom-gallery .post-box {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+#custom-gallery .post-source {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 4px;
 }

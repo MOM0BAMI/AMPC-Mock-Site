@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +11,15 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/custom.css">
-    <!-- FontAwesome for icons -->
+    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+
+<body style="background-color: var(--main-bg); color: var(--text-color);">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--secondary-bg);">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="../index.html">
                 <img src="../images/AMPC_LOGO_NOBACKGROUND.png" alt="AMPC Logo" class="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,76 +47,129 @@
         </div>
     </nav>
 
-<!-- Hero Section -->
-<section id="hero-services" class="d-flex align-items-center justify-content-center" style="background: url('../images/hero-services.jpg') no-repeat center center/cover; height: 60vh;">
-    <div class="hero-overlay text-center">
-        <h1 class="tagline fade-in" style="color: var(--highlight-bg);">Corporate Video Production</h1>
-        <p class="subtext fade-in" style="color: var(--text-color);">Crafting Stories That Resonate</p>
-    </div>
-</section>
+    <!-- Hero Section -->
+    <section id="hero-services" class="d-flex align-items-center justify-content-center" style="background: url('../images/hero-services.jpg') no-repeat center center/cover; height: 60vh;">
+        <div class="hero-overlay text-center">
+            <h1 class="tagline fade-in" style="color: var(--highlight-bg);">Corporate Video Production</h1>
+            <p class="subtext fade-in" style="color: var(--text-color);">Crafting Stories That Resonate</p>
+        </div>
+    </section>
 
-<!-- Video Section -->
-<section class="container my-5" style="background-color: var(--primary-bg); padding: 40px; border-radius: 8px;">
-    <h2 class="section-title fade-in text-center">Our Work</h2>
-    <div class="row g-4 mt-4">
-        <!-- Video Card 1 -->
-        <div class="col-md-4 fade-in">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/uoqVszykXMc" title="Council for Geoscience: Karoo Deep Drilling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- Video Section -->
+    <section class="container my-5" style="background-color: var(--primary-bg); padding: 40px; border-radius: 8px;">
+        <h2 class="section-title fade-in text-center">Our Work</h2>
+        <div class="row g-4 mt-4">
+            <!-- Existing Videos -->
+            <div class="col-md-4 fade-in">
+                <div class="card h-100 shadow-sm">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/uoqVszykXMc" title="Council for Geoscience: Karoo Deep Drilling" frameborder="0" allowfullscreen></iframe>
                     <p class="text-center mt-3">
                         <a href="https://www.youtube.com/watch?v=uoqVszykXMc" target="_blank" class="btn btn-primary mt-2">Watch on YouTube</a>
                     </p>
-                    <p class="gallery-description text-center mt-3">Council for Geoscience: Karoo Deep Drilling.</p>
+                    <p class="gallery-description text-center mt-3">Council for Geoscience: Karoo Deep Drilling</p>
                 </div>
             </div>
-        </div>
-        <!-- Video Card 2 -->
-        <div class="col-md-4 fade-in">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/bUA3NOXnm-0" title="The Blue Label Story" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+            <div class="col-md-4 fade-in">
+                <div class="card h-100 shadow-sm">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/bUA3NOXnm-0" title="The Blue Label Story" frameborder="0" allowfullscreen></iframe>
                     <p class="text-center mt-3">
                         <a href="https://www.youtube.com/watch?v=bUA3NOXnm-0" target="_blank" class="btn btn-primary mt-2">Watch on YouTube</a>
                     </p>
-                    <p class="gallery-description text-center mt-3">The Blue Label Story.</p>
+                    <p class="gallery-description text-center mt-3">The Blue Label Story</p>
                 </div>
             </div>
-        </div>
-        <!-- Video Card 3 -->
-        <div class="col-md-4 fade-in">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/0PwKaPLQ1Ys" title="Blue Train" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+            <div class="col-md-4 fade-in">
+                <div class="card h-100 shadow-sm">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/0PwKaPLQ1Ys" title="Blue Train" frameborder="0" allowfullscreen></iframe>
                     <p class="text-center mt-3">
                         <a href="https://www.youtube.com/watch?v=0PwKaPLQ1Ys" target="_blank" class="btn btn-primary mt-2">Watch on YouTube</a>
                     </p>
-                    <p class="gallery-description text-center mt-3">Blue Train.</p>
+                    <p class="gallery-description text-center mt-3">Blue Train</p>
+                </div>
+            </div>
+    
+            <!-- New Videos -->
+            <div class="col-md-4 fade-in">
+                <div class="card h-100 shadow-sm">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/iQ5AXI1V5C0?list=PLIeLQytmrcIGh8eHwdiE4AhIzmfnEjktG" title="Professional Triathletes Organization" frameborder="0" allowfullscreen></iframe>
+                    <p class="text-center mt-3">
+                        <a href="https://www.youtube.com/watch?v=iQ5AXI1V5C0" target="_blank" class="btn btn-primary mt-2">Watch on YouTube</a>
+                    </p>
+                    <p class="gallery-description text-center mt-3">Professional Triathletes Organization</p>
+                </div>
+            </div>
+    
+            <div class="col-md-4 fade-in">
+                <div class="card h-100 shadow-sm">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/p4JBR9_03Vk?list=PLIeLQytmrcIGh8eHwdiE4AhIzmfnEjktG" title="Sun International, Marketing Video" frameborder="0" allowfullscreen></iframe>
+                    <p class="text-center mt-3">
+                        <a href="https://www.youtube.com/watch?v=p4JBR9_03Vk" target="_blank" class="btn btn-primary mt-2">Watch on YouTube</a>
+                    </p>
+                    <p class="gallery-description text-center mt-3">Sun International, Marketing Video</p>
+                </div>
+            </div>
+    
+            <div class="col-md-4 fade-in">
+                <div class="card h-100 shadow-sm">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/gLFXqhfzMO8?list=PLIeLQytmrcIGh8eHwdiE4AhIzmfnEjktG" title="The Maslow" frameborder="0" allowfullscreen></iframe>
+                    <p class="text-center mt-3">
+                        <a href="https://www.youtube.com/watch?v=gLFXqhfzMO8" target="_blank" class="btn btn-primary mt-2">Watch on YouTube</a>
+                    </p>
+                    <p class="gallery-description text-center mt-3">The Maslow</p>
+                </div>
+            </div>
+    
+            <div class="col-md-4 fade-in">
+                <div class="card h-100 shadow-sm">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/8XcpZTS2zxs?list=PLIeLQytmrcIGh8eHwdiE4AhIzmfnEjktG" title="Nedbank" frameborder="0" allowfullscreen></iframe>
+                    <p class="text-center mt-3">
+                        <a href="https://www.youtube.com/watch?v=8XcpZTS2zxs" target="_blank" class="btn btn-primary mt-2">Watch on YouTube</a>
+                    </p>
+                    <p class="gallery-description text-center mt-3">Nedbank</p>
+                </div>
+            </div>
+    
+            <div class="col-md-4 fade-in">
+                <div class="card h-100 shadow-sm">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/xthKq5sdKWE?list=PLIeLQytmrcIGh8eHwdiE4AhIzmfnEjktG" title="Justyn Brett Davies Showreel" frameborder="0" allowfullscreen></iframe>
+                    <p class="text-center mt-3">
+                        <a href="https://www.youtube.com/watch?v=xthKq5sdKWE" target="_blank" class="btn btn-primary mt-2">Watch on YouTube</a>
+                    </p>
+                    <p class="gallery-description text-center mt-3">Justyn Brett Davies Showreel</p>
+                </div>
+            </div>
+    
+            <div class="col-md-4 fade-in">
+                <div class="card h-100 shadow-sm">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/a7wt0QkRUIY?list=PLIeLQytmrcIGh8eHwdiE4AhIzmfnEjktG" title="Edcon" frameborder="0" allowfullscreen></iframe>
+                    <p class="text-center mt-3">
+                        <a href="https://www.youtube.com/watch?v=a7wt0QkRUIY" target="_blank" class="btn btn-primary mt-2">Watch on YouTube</a>
+                    </p>
+                    <p class="gallery-description text-center mt-3">Edcon</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    
 
-
-<!-- Footer Section -->
-<footer class="footer text-center text-light py-4" style="background-color: var(--soft-accent);">
-    <div class="footer-content fade-in">
-        <p>© 2024 AMPC. All Rights Reserved. Built by <a href="https://janendren.achari.itvarsitystudent.org/" target="_blank" style="color: var(--text-color);">Janendren Achari</a>.</p>
-        <div class="social-links">
-            <a href="https://www.youtube.com/@AMPC_Film_and_Video_Production" class="social-link" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=100027190586598" class="social-link" aria-label="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/ampc_film_and_video_production/" class="social-link" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+    <!-- Footer -->
+    <footer class="footer text-center text-light py-4" style="background-color: var(--soft-accent);">
+        <div class="footer-content fade-in">
+            <p>© 2024 AMPC. All Rights Reserved. Built by <a href="https://janendren.achari.itvarsitystudent.org/" target="_blank" style="color: var(--text-color);">Janendren Achari</a>.</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@AMPC_Film_and_Video_Production" class="social-link" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100027190586598" class="social-link" aria-label="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/ampc_film_and_video_production/" class="social-link" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-    <!-- jQuery and Bootstrap JS -->
+    <!-- Scripts -->
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JavaScript -->
     <script src="../js/scripts.js"></script>
 </body>
 
 </html>
-

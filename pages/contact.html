@@ -17,7 +17,7 @@
 
 <body style="background-color: var(--main-bg); color: var(--text-color);">
 
-    <!-- Navbar (Bootstrap Navbar) -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--secondary-bg);">
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">
@@ -31,7 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="../pages/about.html">About</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="../pages/services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="../pages/corporate-video-production.html">Corporate Video Production</a></li>
                             <li><a class="dropdown-item" href="../pages/commercial-filming.html">Commercial Filming</a></li>
@@ -42,7 +42,7 @@
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="../pages/portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../pages/contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -62,54 +62,59 @@
         <p class="section-text fade-in text-center">
             We’d love to hear from you! Reach out using any of the following methods to start a conversation about how we can bring your vision to life.
         </p>
-        <div class="row">
-            <div class="col-lg-6">
+        <div class="row align-items-center">
+            <div class="col-lg-6 fade-in">
                 <ul class="list-unstyled contact-details">
-                    <li><i class="fas fa-map-marker-alt"></i> Address: 1 Banks Lane, Klippoortje AH, 1401</li>
-                    <li><i class="fas fa-phone"></i> Phone: <a href="tel:+27824488496">+27 82 448 8496</a></li>
-                    <li><i class="fas fa-envelope"></i> Email: <a href="mailto:justyn@africanmotion.co.za">justyn@africanmotion.co.za</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 1 Banks Lane, Klippoortje AH, 1401</li>
+                    <li><i class="fas fa-phone"></i> <strong>Phone:</strong> <a href="tel:+27824488496">+27 82 448 8496</a></li>
+                    <li><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:justyn@africanmotion.co.za">justyn@africanmotion.co.za</a></li>
                 </ul>
                 <div class="contact-buttons mt-4">
                     <button class="btn btn-primary" onclick="redirectToWhatsApp()"><i class="fab fa-whatsapp"></i> Contact Us on WhatsApp</button>
                     <button class="btn btn-secondary" onclick="redirectToEmail()"><i class="fas fa-envelope"></i> Email Us</button>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <img src="../images/Photos/contact-us-image.jpg" alt="Contact Us" class="img-fluid rounded shadow">
+            <div class="col-lg-6 fade-in">
+                <img src="../images/Photos/contact-us-image.jpg" alt="Contact Us Illustration" class="img-fluid rounded shadow">
             </div>
         </div>
     </section>
 
-<!-- Footer Section -->
-<footer class="footer text-center text-light py-4" style="background-color: var(--soft-accent);">
-    <div class="footer-content fade-in">
-        <p>© 2024 AMPC. All Rights Reserved. Built by <a href="https://janendren.achari.itvarsitystudent.org/" target="_blank" style="color: var(--text-color);">Janendren Achari</a>.</p>
-        <div class="social-links">
-            <a href="https://www.youtube.com/@AMPC_Film_and_Video_Production" class="social-link" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=100027190586598" class="social-link" aria-label="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/ampc_film_and_video_production/" class="social-link" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+    <!-- Footer Section -->
+    <footer class="footer text-center text-light py-4" style="background-color: var(--soft-accent);">
+        <div class="footer-content fade-in">
+            <p>© 2024 AMPC. All Rights Reserved. Built by <a href="https://janendren.achari.itvarsitystudent.org/" target="_blank" style="color: var(--text-color);">Janendren Achari</a>.</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@AMPC_Film_and_Video_Production" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100027190586598" aria-label="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/ampc_film_and_video_production/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
     <!-- JavaScript to handle WhatsApp and Email redirection -->
     <script>
         function redirectToWhatsApp() {
-            const whatsappNumber = '27824488496'; // Replace with your WhatsApp number (country code + number)
-            const whatsappMessage = `Hello, I would like to discuss video production services.`;
-            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
-            window.open(whatsappURL, '_blank');
+            try {
+                const whatsappNumber = '27824488496';
+                const whatsappMessage = `Hello, I would like to discuss video production services.`;
+                const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+                window.open(whatsappURL, '_blank');
+            } catch (error) {
+                console.error('Error redirecting to WhatsApp:', error);
+            }
         }
 
         function redirectToEmail() {
-            const subject = 'Inquiry About Video Production Services';
-            const email = 'justyn@africanmotion.co.za';
-            const emailBody = 'Hello, I am interested in your video production services. Please provide more information.';
-
-            const emailURL = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-
-            window.open(emailURL, '_blank');
+            try {
+                const subject = 'Inquiry About Video Production Services';
+                const email = 'justyn@africanmotion.co.za';
+                const emailBody = 'Hello, I am interested in your video production services. Please provide more information.';
+                const emailURL = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+                window.open(emailURL, '_blank');
+            } catch (error) {
+                console.error('Error redirecting to Email:', error);
+            }
         }
     </script>
 
