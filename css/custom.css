@@ -432,3 +432,289 @@ footer .social-links a:hover {
     padding: 3px 6px;
     border-radius: 4px;
 }
+
+/* Scoped styles for the About, Vision, Values, Team, and Mission sections */
+#about, #vision, #values, #team, #mission {
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.1));
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+}
+
+#about:hover, #vision:hover, #values:hover, #team:hover, #mission:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Title Styling */
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Paragraphs */
+#about .about-text,
+#vision .vision-text,
+#mission .mission-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+/* Values Section */
+#values .values-list {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#values .values-list li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2rem;
+    list-style: none;
+}
+
+#values .values-list li::before {
+    content: '⭐';
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+/* Team Cards */
+#team .card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--primary-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#team .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#team .team-photo {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+#team .card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+#team .card-text {
+    font-size: 1rem;
+    color: var(--text-color-light);
+}
+
+/* Fade-in animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact Form Styling */
+.contact-form {
+    background-color: var(--primary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--highlight-bg);
+    outline: none;
+}
+
+.contact-form button {
+    background-color: var(--highlight-bg);
+    color: var(--text-color);
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #a7d8a5;
+    transform: scale(1.05);
+}
+
+/* Social Links */
+.contact-social-links {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-social-links a {
+    margin: 0 15px;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    transition: color 0.3s, transform 0.3s ease;
+}
+
+.contact-social-links a:hover {
+    color: var(--highlight-bg);
+    transform: scale(1.2);
+}
+
+/* Custom Message Box for Response */
+.response-message {
+    padding: 15px;
+    background-color: var(--highlight-bg);
+    color: var(--text-color);
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Photography Page Specific Styles */
+.photography-page #hero-services {
+    background-image: url('../images/hero-photography.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.photography-page .tagline {
+    font-size: 3rem;
+    color: var(--highlight-bg);
+    font-weight: bold;
+}
+
+.photography-page .subtext {
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+.photography-page .category {
+    margin-bottom: 40px;
+}
+
+.photography-page .section-title {
+    font-size: 2rem;
+    color: var(--highlight-bg);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.photography-page .gallery-description {
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Fade-in effect for images */
+.photography-page .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Adjust for mobile screens */
+.photography-page .category .row {
+    display: flex;
+    justify-content: center;
+}
+
+/* Button style */
+.photography-page .btn-primary {
+    background-color: var(--highlight-bg);
+    border-color: var(--highlight-bg);
+    padding: 10px 30px;
+    font-size: 1.1rem;
+}
+
+.photography-page .btn-primary:hover {
+    background-color: var(--highlight-bg-dark);
+    border-color: var(--highlight-bg-dark);
+}
+
+/* Custom footer style */
+.photography-page footer {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+}

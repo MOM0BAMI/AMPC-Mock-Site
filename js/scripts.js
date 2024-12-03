@@ -116,3 +116,15 @@ testimonialImages.forEach(image => {
 zoomOverlay.addEventListener('click', () => {
     zoomOverlay.classList.remove('active'); // Hide the overlay
 });
+
+// Form validation for Add Contact page
+document.querySelector('form').addEventListener('submit', function (e) {
+    const name = document.querySelector('input[name="name"]');
+    const email = document.querySelector('input[name="email"]');
+    const phone = document.querySelector('input[name="phone"]');
+
+    if (!name.value || !email.value || !phone.value) {
+        e.preventDefault();  // Prevent form submission
+        alert('All fields are required!');
+    }
+});
