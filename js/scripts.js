@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbarCollapse = document.querySelector('#navbarNav');
 
     navbarToggle.addEventListener('click', () => {
-        navbarCollapse.classList.toggle('show');  // Bootstrap class to show/hide menu
+        navbarCollapse.classList.toggle('show'); // Bootstrap class to show/hide menu
     });
 
     // 2. Smooth Scrolling for Anchor Links
@@ -20,22 +20,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Lazy Loading for Images (using Intersection Observer)
+    // 3. Lazy Loading for Images (with fallback for older browsers)
     const lazyImages = document.querySelectorAll('img.lazy');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const image = entry.target;
-                image.src = image.dataset.src;  // Lazy load images
-                image.classList.remove('lazy');
-                observer.unobserve(image);
-            }
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const image = entry.target;
+                    image.src = image.dataset.src; // Lazy load images
+                    image.classList.remove('lazy');
+                    observer.unobserve(image);
+                }
+            });
         });
-    });
-
-    lazyImages.forEach(image => {
-        imageObserver.observe(image);
-    });
+        lazyImages.forEach(image => imageObserver.observe(image));
+    } else {
+        lazyImages.forEach(image => {
+            image.src = image.dataset.src; // Fallback loading
+            image.classList.remove('lazy');
+        });
+    }
 
     // 4. Touch Event Handling for Interactive Elements (Buttons, Links)
     const buttons = document.querySelectorAll('.btn');
@@ -48,15 +52,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Adjust Layout or Hide Elements on Mobile
-    const heroSection = document.querySelector('#hero');
-    const screenWidth = window.innerWidth;
+    // Remove active state when touching outside a button
+    document.addEventListener('touchstart', (e) => {
+        if (!e.target.classList.contains('btn')) {
+            buttons.forEach(button => button.classList.remove('active'));
+        }
+    });
 
-    if (screenWidth < 768) {
-        heroSection.style.display = 'none';  // Example of hiding an element on mobile
-    } else {
-        heroSection.style.display = 'block';
-    }
+    // 5. Adjust Layout or Hide Elements on Mobile (Use classes instead of inline styles)
+    const heroSection = document.querySelector('#hero');
+    const adjustHeroSection = () => {
+        if (window.innerWidth < 768) {
+            heroSection.classList.add('hidden');
+        } else {
+            heroSection.classList.remove('hidden');
+        }
+    };
+    adjustHeroSection();
 
     // 6. Auto Focus on First Input Field in Forms
     const firstField = document.querySelector('form input');
@@ -64,32 +76,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 7. Adjust Button Sizes for Mobile (Make buttons bigger on mobile)
     const buttonsForMobile = document.querySelectorAll('button');
-    buttonsForMobile.forEach(button => {
-        if (window.innerWidth < 768) {
-            button.style.fontSize = '18px';  // Increase button size on mobile
-        }
-    });
+    const adjustButtonSize = () => {
+        buttonsForMobile.forEach(button => {
+            if (window.innerWidth < 768) {
+                button.style.fontSize = '18px'; // Increase button size on mobile
+            } else {
+                button.style.fontSize = ''; // Reset to default
+            }
+        });
+    };
+    adjustButtonSize();
 
-    // 8. Resize Event Handling (For dynamic layout adjustments)
+    // 8. Resize Event Handling (Debounced)
+    let resizeTimeout;
     window.addEventListener('resize', () => {
-        const screenWidth = window.innerWidth;
-        const screenHeight = window.innerHeight;
-
-        // Adjust layout for mobile screens
-        if (screenWidth < 768) {
-            document.body.classList.add('mobile');  // Example: Add a class for mobile-specific styles
-        } else {
-            document.body.classList.remove('mobile');
-        }
-
-        // Dynamically hide/show elements or adjust content based on window size
-        if (screenWidth < 768) {
-            heroSection.style.display = 'none'; // Adjust hero section for mobile
-        } else {
-            heroSection.style.display = 'block';
-        }
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            adjustHeroSection();
+            adjustButtonSize();
+        }, 200); // Adjust the delay as needed
     });
-
 });
 
 // Select all testimonial images
@@ -98,6 +104,8 @@ const testimonialImages = document.querySelectorAll('.testimonial-image');
 // Create the zoom overlay element
 const zoomOverlay = document.createElement('div');
 zoomOverlay.className = 'zoom-overlay';
+zoomOverlay.setAttribute('role', 'dialog');
+zoomOverlay.setAttribute('aria-hidden', 'true');
 document.body.appendChild(zoomOverlay);
 
 // Add an image element to the overlay
@@ -109,12 +117,14 @@ testimonialImages.forEach(image => {
     image.addEventListener('click', () => {
         zoomedImage.src = image.src; // Set the source of the zoomed image
         zoomOverlay.classList.add('active'); // Show the overlay
+        zoomOverlay.setAttribute('aria-hidden', 'false'); // Accessibility
     });
 });
 
 // Add click event to the overlay to close the zoom
 zoomOverlay.addEventListener('click', () => {
     zoomOverlay.classList.remove('active'); // Hide the overlay
+    zoomOverlay.setAttribute('aria-hidden', 'true'); // Accessibility
 });
 
 // Form validation for Add Contact page
@@ -122,9 +132,15 @@ document.querySelector('form').addEventListener('submit', function (e) {
     const name = document.querySelector('input[name="name"]');
     const email = document.querySelector('input[name="email"]');
     const phone = document.querySelector('input[name="phone"]');
+    const errorMsg = document.querySelector('.error-message');
 
     if (!name.value || !email.value || !phone.value) {
-        e.preventDefault();  // Prevent form submission
-        alert('All fields are required!');
+        e.preventDefault(); // Prevent form submission
+        if (errorMsg) {
+            errorMsg.textContent = 'All fields are required!';
+            errorMsg.classList.add('visible');
+        } else {
+            alert('All fields are required!');
+        }
     }
 });

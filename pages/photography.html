@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Our Services - AMPC">
+    <meta name="description" content="Our Photography Services - AMPC">
     <title>AMPC - Photography Services</title>
 
     <!-- Bootstrap CSS -->
@@ -13,7 +13,6 @@
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- Optional: Add custom styles here -->
     <style>
     /* Add any custom styles here */
     </style>
@@ -23,8 +22,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--secondary-bg);">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="../images/AMPC_LOGO_NOBACKGROUND.png" alt="AMPC Logo" class="logo" style="height: 50px;">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/AMPC_LOGO_NOBACKGROUND.png" alt="AMPC Logo" class="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -37,14 +36,14 @@
                         <a class="nav-link dropdown-toggle" href="../pages/services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="../pages/corporate-video-production.html">Corporate Video Production</a></li>
-                            <li><a class="dropdown-item" href="../pages/commercial-filming.html">Commercial Filming</a></li>
+                            <li><a class="dropdown-item" href="../pages/commercial-filming.html">Commercials</a></li>
                             <li><a class="dropdown-item" href="../pages/post-production.html">Post-Production</a></li>
                             <li><a class="dropdown-item" href="../pages/photography.html">Photography</a></li>
                             <li><a class="dropdown-item" href="../pages/live-event-production.html">Live Event Production</a></li>
                             <li><a class="dropdown-item" href="../pages/social-media-content.html">Social Media Content</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="../pages/portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/testimonials.html">Testimonials</a></li>
                     <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -52,17 +51,24 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero-services">
+    <section id="hero-services" class="d-flex align-items-center justify-content-center" 
+    style="background: url('../images/hero-commercial-filming.jpg') no-repeat center center/cover; min-height: 60vh;">
         <div class="hero-overlay text-center">
-            <h1 class="tagline fade-in" style="color: var(--highlight-bg);">Photography</h1>
-            <p class="subtext fade-in" style="color: var(--text-color);">Capturing the Perfect Moments</p>
+            <h1 class="tagline fade-in" style="color: var(--highlight-bg, #ffffff);">
+                Photography
+            </h1>
+            <p class="subtext fade-in" style="color: var(--text-color, #f8f9fa);">
+                Capturing the Perfect Moments
+            </p>
         </div>
     </section>
 
     <!-- Introduction Section -->
     <section id="introduction" class="container my-5">
         <h2 class="text-center" style="color: var(--highlight-bg);">Photography Services Overview</h2>
-        <p class="text-center" style="color: var(--text-color);">At AMPC, we specialize in providing professional photography services for a wide range of needs. Whether you require corporate headshots, wedding photography, industrial imagery, or architectural shots, our experienced photographers work diligently to capture moments that speak volumes. We combine technical skill with an artistic touch to deliver images that reflect your brand, event, or personal milestones with perfection.</p>
+        <p class="text-center" style="color: var(--text-color);">
+            At AMPC, we specialize in providing professional photography services for a wide range of needs. Whether you require corporate headshots, wedding photography, industrial imagery, or architectural shots, our experienced photographers work diligently to capture moments that speak volumes. We combine technical skill with an artistic touch to deliver images that reflect your brand, event, or personal milestones with perfection.
+        </p>
     </section>
 
     <!-- Gallery Section -->
@@ -72,9 +78,10 @@
         <!-- Corporate Headshots -->
         <div class="category my-5">
             <h3 class="text-center" style="color: var(--highlight-bg);">Corporate Headshots/Portraits</h3>
-            <p class="text-center" style="color: var(--text-color);">Our corporate headshots and portraits are designed to help businesses present a professional and polished image. Whether you are looking for individual portraits or team photos, our photographers excel in making every subject look confident and approachable. A strong headshot can be a powerful representation of your company and brand.</p>
+            <p class="text-center" style="color: var(--text-color);">
+                Our corporate headshots and portraits are designed to help businesses present a professional and polished image. Whether you are looking for individual portraits or team photos, our photographers excel in making every subject look confident and approachable. A strong headshot can be a powerful representation of your company and brand.
+            </p>
             <div class="row g-4 mt-4 justify-content-center">
-                <!-- Gallery Item 1 -->
                 <div class="col-md-4 fade-in">
                     <div class="card h-100 shadow-sm">
                         <img src="../images/Photos/Corporate Headshots/MG_1886portrait.jpg" alt="Headshot 1" class="img-fluid card-img-top">
@@ -83,7 +90,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Gallery Item 2 -->
                 <div class="col-md-4 fade-in">
                     <div class="card h-100 shadow-sm">
                         <img src="../images/Photos/Corporate Headshots/MG_2694-1.jpg" alt="Headshot 2" class="img-fluid card-img-top">
@@ -92,7 +98,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Gallery Item 3 -->
                 <div class="col-md-4 fade-in">
                     <div class="card h-100 shadow-sm">
                         <img src="../images/Photos/Corporate Headshots/MG_5205-1.jpg" alt="Headshot 3" class="img-fluid card-img-top">
@@ -107,9 +112,10 @@
         <!-- Weddings -->
         <div class="category my-5">
             <h3 class="text-center" style="color: var(--highlight-bg);">Weddings</h3>
-            <p class="text-center" style="color: var(--text-color);">We understand that your wedding day is one of the most important moments in your life. Our wedding photography service is designed to capture every special moment, from the quiet moments of reflection to the grand celebration. We aim to create timeless images that tell the beautiful story of your day.</p>
+            <p class="text-center" style="color: var(--text-color);">
+                We understand that your wedding day is one of the most important moments in your life. Our wedding photography service is designed to capture every special moment, from the quiet moments of reflection to the grand celebration. We aim to create timeless images that tell the beautiful story of your day.
+            </p>
             <div class="row g-4 mt-4 justify-content-center">
-                <!-- Gallery Item 1 -->
                 <div class="col-md-4 fade-in">
                     <div class="card h-100 shadow-sm">
                         <img src="../images/Photos/Weddings/MG_0033.jpg" alt="Wedding 1" class="img-fluid card-img-top">
@@ -118,7 +124,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Gallery Item 2 -->
                 <div class="col-md-4 fade-in">
                     <div class="card h-100 shadow-sm">
                         <img src="../images/Photos/Weddings/MG_7438.jpg" alt="Wedding 2" class="img-fluid card-img-top">
@@ -127,7 +132,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Gallery Item 3 -->
                 <div class="col-md-4 fade-in">
                     <div class="card h-100 shadow-sm">
                         <img src="../images/Photos/Weddings/MG_7888.jpg" alt="Wedding 3" class="img-fluid card-img-top">
@@ -142,41 +146,42 @@
         <!-- Industrial/Construction -->
         <div class="category my-5">
             <h3 class="text-center" style="color: var(--highlight-bg);">Industrial/Construction</h3>
-            <p class="text-center" style="color: var(--text-color);">Our industrial and construction photography services focus on capturing the scale and detail of your projects. From construction sites to completed structures, we document the entire process to help showcase your work to clients, investors, and stakeholders.</p>
+            <p class="text-center" style="color: var(--text-color);">
+                Our industrial and construction photography services focus on capturing the scale and detail of your projects. From construction sites to completed structures, we document the entire process to help showcase your work to clients, investors, and stakeholders.
+            </p>
             <div class="row g-4 mt-4 justify-content-center">
-                <!-- Gallery Item 1 -->
                 <div class="col-md-4 fade-in">
                     <div class="card h-100 shadow-sm">
                         <img src="../images/Photos/Construction/WhatsApp-Image-2021-10-21-at-11.09.36-AM-6.jpeg" alt="Industrial 1" class="img-fluid card-img-top">
                         <div class="card-body">
-                            <p class="gallery-description text-center">Documenting industrial progress.</p>
+                            <p class="gallery-description text-center">Capturing the strength of industrial work.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Gallery Item 2 -->
                 <div class="col-md-4 fade-in">
                     <div class="card h-100 shadow-sm">
                         <img src="../images/Photos/Construction/WhatsApp-Image-2021-10-21-at-11.09.36-AM-9.jpeg" alt="Industrial 2" class="img-fluid card-img-top">
                         <div class="card-body">
-                            <p class="gallery-description text-center">Showcasing your work in action.</p>
+                            <p class="gallery-description text-center">Industrial construction photography.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Gallery Item 3 -->
                 <div class="col-md-4 fade-in">
                     <div class="card h-100 shadow-sm">
                         <img src="../images/Photos/Construction/WhatsApp-Image-2021-10-21-at-11.09.36-AM.jpeg" alt="Industrial 3" class="img-fluid card-img-top">
                         <div class="card-body">
-                            <p class="gallery-description text-center">High-quality construction imagery.</p>
+                            <p class="gallery-description text-center">Documenting the scale of your projects.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-                <!-- Team/Employee -->
+        <!-- Team/Employee Section -->
 <div class="category my-5">
     <h3 class="text-center" style="color: var(--highlight-bg);">Team/Employee</h3>
-    <p class="text-center" style="color: var(--text-color);">Team and employee photography is an essential part of showcasing your organization's culture and professionalism. Whether for internal use, team-building activities, or your company website, our team photography service ensures that the essence of your team's dynamic and energy is captured perfectly. We specialize in creating natural and professional portraits that reflect the personality of your team and the values of your company.</p>
+    <p class="text-center" style="color: var(--text-color);">
+        Team and employee photography is an essential part of showcasing your organization's culture and professionalism. Whether for internal use, team-building activities, or your company website, our team photography service ensures that the essence of your team's dynamic and energy is captured perfectly. We specialize in creating natural and professional portraits that reflect the personality of your team and the values of your company.
+    </p>
     <div class="row g-4 mt-4 justify-content-center">
         <!-- Gallery Item 1 -->
         <div class="col-md-4 fade-in">
@@ -208,10 +213,12 @@
     </div>
 </div>
 
-<!-- Architectural/Interior -->
+<!-- Architectural/Interior Section -->
 <div class="category my-5">
     <h3 class="text-center" style="color: var(--highlight-bg);">Architectural/Interior</h3>
-    <p class="text-center" style="color: var(--text-color);">Architectural and interior photography focuses on showcasing the design, functionality, and aesthetics of spaces. Whether you are an architect, designer, or property owner, our professional photographers can capture the details, ambiance, and scale of your project in a way that highlights its beauty and craftsmanship. We specialize in both exteriors and interiors, providing images that effectively represent the vision behind your architectural works.</p>
+    <p class="text-center" style="color: var(--text-color);">
+        Architectural and interior photography focuses on showcasing the design, functionality, and aesthetics of spaces. Whether you are an architect, designer, or property owner, our professional photographers can capture the details, ambiance, and scale of your project in a way that highlights its beauty and craftsmanship. We specialize in both exteriors and interiors, providing images that effectively represent the vision behind your architectural works.
+    </p>
     <div class="row g-4 mt-4 justify-content-center">
         <!-- Gallery Item 1 -->
         <div class="col-md-4 fade-in">
@@ -245,20 +252,29 @@
 
     </section>
 
-        <!-- Call to Action -->
-        <div class="my-5 text-center">
-            <p class="lead" style="color: var(--text-color);">If you're looking for high-quality photography services, get in touch with us today!</p>
-            <a href="../pages/contact.html" class="btn btn-primary">Contact Us</a>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2024 AMPC Photography Services. All rights reserved.</p>
+    <footer class="footer text-center text-light py-4" style="background-color: var(--soft-accent);">
+        <div class="footer-content fade-in">
+            <p>© 2024 AMPC. All Rights Reserved. Built by <a href="https://janendren.achari.itvarsitystudent.org/" target="_blank" style="color: var(--text-color);">Janendren Achari</a>.</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@AMPC_Film_and_Video_Production" 
+                    class="social-link" aria-label="Visit AMPC's YouTube Channel" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100027190586598" 
+                    class="social-link" aria-label="Visit AMPC's Facebook Page" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/ampc_film_and_video_production/" 
+                    class="social-link" aria-label="Visit AMPC's Instagram Profile" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>            
+        </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/scripts.js"></script>
 </body>

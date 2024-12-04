@@ -18,41 +18,43 @@
             <a class="navbar-brand" href="../index.html">
                 <img src="../images/AMPC_LOGO_NOBACKGROUND.png" alt="AMPC Logo" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="../pages/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/about.html">About</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light" href="../pages/services.html" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <a class="nav-link dropdown-toggle" href="../pages/services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="../pages/corporate-video-production.html">Corporate Video Production</a></li>
-                            <li><a class="dropdown-item" href="../pages/commercial-filming.html">Commercial Filming</a></li>
+                            <li><a class="dropdown-item" href="../pages/commercial-filming.html">Commercials</a></li>
                             <li><a class="dropdown-item" href="../pages/post-production.html">Post-Production</a></li>
                             <li><a class="dropdown-item" href="../pages/photography.html">Photography</a></li>
                             <li><a class="dropdown-item" href="../pages/live-event-production.html">Live Event Production</a></li>
                             <li><a class="dropdown-item" href="../pages/social-media-content.html">Social Media Content</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link text-light" href="../pages/portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="../pages/contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/testimonials.html">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero-services" class="d-flex align-items-center justify-content-center"
-        style="background: url('../images/hero-background.jpg') no-repeat center center/cover; height: 60vh;">
-        <div class="hero-overlay text-center">
-            <h1 class="tagline fade-in" style="color: var(--highlight-bg);">Our Services</h1>
-            <p class="subtext fade-in" style="color: var(--text-color);">Tailored production services to meet your needs</p>
-        </div>
-    </section>
+        <!-- Hero Section -->
+        <section id="hero-services" class="d-flex align-items-center justify-content-center" 
+        style="background: url('../images/hero-commercial-filming.jpg') no-repeat center center/cover; min-height: 60vh;">
+            <div class="hero-overlay text-center">
+                <h1 class="tagline fade-in" style="color: var(--highlight-bg, #ffffff);">
+                    Our Services
+                </h1>
+                <p class="subtext fade-in" style="color: var(--text-color, #f8f9fa);">
+                    Tailored production services to meet your needs
+                </p>
+            </div>
+        </section>
 
     <!-- Services Section -->
     <section id="services" class="container my-5" style="background-color: var(--primary-bg); padding: 40px; border-radius: 8px;">
@@ -121,22 +123,30 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer class="footer text-center text-light py-4" style="background-color: var(--soft-accent);">
         <div class="footer-content fade-in">
             <p>© 2024 AMPC. All Rights Reserved. Built by <a href="https://janendren.achari.itvarsitystudent.org/" target="_blank" style="color: var(--text-color);">Janendren Achari</a>.</p>
             <div class="social-links">
-                <a href="https://www.youtube.com/@AMPC_Film_and_Video_Production" class="social-link" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100027190586598" class="social-link" aria-label="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/ampc_film_and_video_production/" class="social-link" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
+                <a href="https://www.youtube.com/@AMPC_Film_and_Video_Production" 
+                    class="social-link" aria-label="Visit AMPC's YouTube Channel" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100027190586598" 
+                    class="social-link" aria-label="Visit AMPC's Facebook Page" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/ampc_film_and_video_production/" 
+                    class="social-link" aria-label="Visit AMPC's Instagram Profile" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>            
         </div>
     </footer>
 
-    <!-- jQuery and Bootstrap JS -->
+    <!-- Scripts -->
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JavaScript -->
     <script src="../js/scripts.js"></script>
 </body>
 
